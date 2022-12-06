@@ -1,0 +1,24 @@
+.container
+{
+    margin:5rem;
+    
+}
+
+.inputField
+{
+    display:block;
+    margin: 1rem;
+}
+
+
+body{
+    background-color:#1e293b;
+    color: #e2e8f0;
+}
+#submit-btn{
+    margin-left: 1rem;
+}    
+
+#output{
+    margin:2rem;
+}
