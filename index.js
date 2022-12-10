@@ -22,7 +22,7 @@ function calculateProfitOrLoss(initialP,quantity,currentP)
             //profit
             profitLoss=(currentP-initialP)*quantity;
             PercentageProfitLoss=((currentP-initialP)/initialP)*100;;
-            document.getElementById('output').style.color="#f8fafc";
+            document.getElementById('output').style.color="#e2e8f0";
             displayMessage(`Hey! you just earned a profit of ${profitLoss} with ${PercentageProfitLoss}%`);
           
 
@@ -32,14 +32,14 @@ function calculateProfitOrLoss(initialP,quantity,currentP)
             //loss
             profitLoss=(currentP-initialP)*quantity;
            PercentageProfitLoss=((currentP-initialP)/initialP)*100;
-            document.getElementById('output').style.color="#f8fafc";
+            document.getElementById('output').style.color="#e2e8f0";
             displayMessage(`Hey! you have to bear loss of ${profitLoss} with ${PercentageProfitLoss}%`);
             
 
         }
         else{
             //neither profit nor loss 
-            document.getElementById('output').style.color="#f8fafc";
+            document.getElementById('output').style.color="#e2e8f0";
             displayMessage("If you can't see something moving, doesn't mean its not going somewhere!");
         }
 
