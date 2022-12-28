@@ -15,33 +15,32 @@ function onClickHandler()
 }
 function calculateProfitOrLoss(initialP,quantity,currentP)
 {
-    let profitLoss=0,PercentageProfitLoss=0;
-    
-        if(currentP >initialP)
+    let price = currentP-initialP;
+       if (price === 0){
+        //neither profit nor loss 
+        document.getElementById('output').style.color="#e2e8f0";
+        displayMessage("If you can't see something moving, doesn't mean its not going somewhere!");
+       }
+       else if(price>0)
         {
             //profit
-            profitLoss=(currentP-initialP)*quantity;
-            PercentageProfitLoss=((currentP-initialP)/initialP)*100;;
+            profitLoss=(price)*quantity;
+            PercentageProfitLoss=((price)/initialP)*100;;
             document.getElementById('output').style.color="#e2e8f0";
             displayMessage(`Hey! you just earned a profit of ${profitLoss} with ${PercentageProfitLoss}%`);
           
 
         }
-        else if(initialP >currentP)
+        else 
         {
             //loss
-            profitLoss=(currentP-initialP)*quantity;
-           PercentageProfitLoss=((currentP-initialP)/initialP)*100;
+            price = price*(-1)
+            profitLoss=(price)*quantity;
+           PercentageProfitLoss=((price)/initialP)*100;
             document.getElementById('output').style.color="#e2e8f0";
             displayMessage(`Hey! you have to bear loss of ${profitLoss} with ${PercentageProfitLoss}%`);
-            
-
         }
-        else{
-            //neither profit nor loss 
-            document.getElementById('output').style.color="#e2e8f0";
-            displayMessage("If you can't see something moving, doesn't mean its not going somewhere!");
-        }
+        
 
 }
 
